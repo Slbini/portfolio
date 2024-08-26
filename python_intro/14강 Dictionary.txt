@@ -1,0 +1,55 @@
+#14강 dictionary
+#목차
+#1. 딕셔너리 만들기
+#2. 딕셔너리 특징
+#3. 딕셔너리 활용
+
+
+
+#1. 딕셔너리 만들기
+dic={}
+dic=dict()
+
+
+
+
+#2. 딕셔너리 특징
+#사전형(딕셔너리)
+#dic = {키:값, 키:값, 키:값}
+#딕셔너리의 기본 형태
+#리스트, 튜플, 세트와 달리 키(key)와 값으로 이루어
+
+dic={'kor':80,'eng':90,'mat':77}
+dic['kor']
+dic['kor']=85 #변경
+dic['sci']=92 #추가
+
+dic[0] #인덱스로 부르면 에러 #key 값으로 불러야
+
+
+
+
+ 
+#3. 딕셔너리 활용
+del dic['mat'] #삭제하기
+dic.clear() #전체 삭제
+'eng' in dic #확인하기 (키 기준)
+len(dic) #전체 개수
+
+dic.keys() #모든 키 얻기
+dic.values() #모든 값 얻기
+dic.items() #모든 순서쌍 얻기
+
+tuple(dic)
+list(dic)
+set(dic)  #key 값 들만 들어
+
+li=['ab','cd','ef']
+dict(li)  #{'a': 'b', 'c': 'd', 'e': 'f'}
+
+###li=['ab','cd','eff']는 error #짝이 안 맞으면 만들 수가 없
+
+li=[['a',1],['b',2],['c',3]]
+dict(li)
+
+###li=[['a',1],['b',2],['c',3,4]]는 error

@@ -1,0 +1,65 @@
+#23강 소수
+#목차
+#1. 소수 판별하기
+#2. 범위 내의 소수 구하기
+
+
+
+
+
+#1. 소수 판별하기
+#숫자 하나 입력 받아 소수인지 아닌지 확인하기
+#1,n
+'''
+n=int(input('n:'))
+num=0
+
+for i in range(2,n):
+    if n%i==0:
+        num=num+1
+
+if num==0:
+    print('소수입니다')
+else:
+    print('소수가 아닙니다')
+'''
+'''
+n=int(input('n:'))
+check=True
+
+for i in range(2,n):
+    if n%i==0:
+        check=False
+
+print(check)
+'''
+
+
+#2. 범위 내의 소수 구하기
+#a 값을 하나 입력 받아 1~a 사이 모든 소수값 구하기 (a>0)
+
+a=int(input('a:'))
+li=[]
+num=0
+
+for i in range(2,a+1):
+    check=True
+    for j in range(2,i):
+        if i%j==0:
+            check=False
+    if check:
+        li.append(i)
+        
+print(li)
+
+
+
+
+
+            
+
+
+
+
+
+

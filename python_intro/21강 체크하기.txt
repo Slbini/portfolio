@@ -1,0 +1,42 @@
+#21강 체크하기
+#목차
+#1. 문자 체크
+#2. 숫자 체크
+
+
+
+#1. 문자 체크
+# 긴 문장(text)과 한 문자(t)를 입력받아
+# t가 text안에 포함되어 있는지 확인
+'''
+text=input('text:')
+t = input('t:')
+
+#print(t in text)
+
+check = False
+
+for i in text:
+    if i==t:
+        check = True
+
+print(check)
+'''
+
+
+#2. 숫자 체크
+# 5개의 숫자를 입력받아 리스트를 만들고
+# n을 입력받아 리스트 값에 n이 있는지 확인
+
+li=list(map(int,input('num:').split()))
+n=int(input('n:'))
+
+#print(n in li)
+
+check = False
+
+for i in li:
+    if i==n:
+        check = True
+
+print(check)

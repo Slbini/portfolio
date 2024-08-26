@@ -1,0 +1,75 @@
+#10강 제어문 중첩
+#[목차]
+#1. if + if
+#2. for + if
+#3. while + if
+#4. for + for
+
+
+
+
+#1. if + if
+'''
+age=int(input('나이 입력:'))
+
+if age<=7:
+    print('유아입니다.')
+elif age<=19:
+    print('청소년입니다.')
+    if age<=13:
+        print('초등학생')
+    elif age<=16:
+        print('중학생')
+    else:
+        print('고등학생')
+else :
+    print('성입니다.')
+'''
+
+
+
+#2. for + if
+'''
+n=int(input('n:'))
+for i in range(1,n+1):
+    if i%3==0:
+        print('X')
+    else :
+        print(i)
+'''
+
+
+
+        
+#3. while + if
+'''
+num1=0
+num2=int(input('n:'))
+
+while True: #while 문은 조건문이 참인 동안 반복 수행 # 무한 루프 만든것
+    num1=num1+1
+    print(num1)
+    if num1==num2:
+        break
+'''
+
+
+
+
+
+#4. for + for
+
+for i in range(1,7): #주사위 2개 던져서 나올 수 있는 모든 경우의 수
+    for j in range(1,7):
+        print(i,j)
+
+#i=1인 상태에서 j를 반복
+#한 바퀴 다 돌면 바깥의 for문에서 i=2가 되고 반복
+        
+        
+
+
+
+
+
+

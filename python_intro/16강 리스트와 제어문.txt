@@ -1,0 +1,56 @@
+#16강 리스트와 제어문
+#목차
+#1. 리스트와 for문
+#2. 리스트와 if문
+#3. 리스트 분리하기
+
+
+
+'''
+#1. 리스트와 for문
+#for문으로 리스트 값 추가
+li=[]
+
+for i in range(5):
+    li.append(int(input('숫자 입력:')))   
+
+#for문으로 리스트 값 출력
+li=[7,8,4,1,9]
+for i in range(len(li)):
+    print(li[i])
+
+
+for i in li:
+    print(i)
+
+
+
+
+#2. 리스트와 if문
+#if문 추가
+for i in range(len(li)): #index가 짝수
+    if i%2==0:
+        print(li[i])
+
+print()
+
+for i in li: #숫자가 짝수
+    if i%2==0:
+       print(i)
+'''
+
+
+#3. 리스트 분리하기
+li=list(input('문자 입력:'))
+
+up=[]
+low=[]
+
+for i in li:
+    if i.isupper():
+        up.append(i)
+    elif i.islower():
+        low.append(i)
+
+print(up)
+print(low)

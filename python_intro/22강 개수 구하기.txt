@@ -1,0 +1,78 @@
+#22강 개수 구하기
+#목차
+#1. 약수의 개수 구하기
+#2. OX 개수 구하기
+#3. 평균 이상 개수 구하기
+
+
+
+
+#1. 약수의 개수 구하기
+#n을 입력받아 n의 약수의 개수 구하기
+'''
+n=int(input('n:'))
+s=0
+
+
+for i in range(1,n+1):
+    if n%i==0:
+        s=s+1
+
+print(s)
+'''
+
+'''
+n=int(input('n:'))
+li=[]
+
+
+for i in range(1,n+1):
+    if n%i==0:
+        li.append(i)
+
+print(len(li))
+'''
+
+#2. OX 개수 구하기
+#text를 입력받아 o의 개수,x의 개수 구하기
+'''
+text=list(input('text:'))
+
+
+#print(text.count('o'))
+#print(text.count('x'))
+
+o_count=0
+x_count=0
+
+for i in text:
+    if i=='o':
+        o_count=o_count+1
+    elif i=='x':
+        x_count=x_count+1
+        
+
+print('o의 개수: {} x의 개수: {}'.format(o_count,x_count))
+'''
+
+
+
+
+#3. 평균 이상 개수 구하기
+#여러개의 숫자를 입력받아 평균을 구하고
+#평균 이상의 숫자 개수 구하기
+
+num=list(map(int,input('num:').split()))
+mean=sum(num)/len(num)
+over_mean=0
+
+for i in num:
+    if i>=mean:
+        over_mean=over_mean+1
+
+print('평균: {}, 평균이상 숫자 개수: {}'.format(mean,over_mean))
+        
+
+
+
+

@@ -1,0 +1,39 @@
+#30강 정렬하기
+#목차
+#1. 선택 정렬
+#2. 버블 정렬
+
+
+
+
+#1. 선택 정렬
+'''
+li=[8,6,4,1,2,3,5,10,9,7]
+
+for i in range(len(li)):
+    #print(li)
+    m_index=i
+    for j in range(i,len(li)):
+        if li[j]<li[m_index]:
+            m_index=j #j는 최소값의 index 번호!
+    li[i],li[m_index]=li[m_index],li[i]
+
+print(li)
+'''
+
+
+
+#2. 버블 정렬
+
+li=[8,6,4,1,2,3,5,10,9,7]
+
+for i in range(len(li)):
+    #print(li)
+    for j in range(len(li)-i-1): #제일 큰 애를 맨 뒤로 보내고, 맨 뒤 빼고 반
+        if li[j]>li[j+1]:
+            li[j],li[j+1]=li[j+1],li[j]
+
+print(li)
+
+
+

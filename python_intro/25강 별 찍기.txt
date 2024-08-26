@@ -1,0 +1,98 @@
+#25강 별 찍기
+#목차
+#1. 계단
+#2. 삼각형
+#3. 역삼각형
+#4. 피라미드
+
+
+
+
+#1. 계단
+'''
+***
+ ***
+  ***
+  
+n=int(input('n:'))
+
+for i in range(n): #n=5, i=0,1,2,3,4
+    print(' '*i,end='') #end=''는 줄바꿈을 없앰
+    print('*'*n)
+'''
+
+#2. 삼각형
+'''
+*
+**
+***
+
+  *
+ **
+***
+
+
+n=int(input('n:'))
+
+for i in range(1,n+1): 
+    print('*'*i)
+
+
+
+n=int(input('n:'))
+
+for i in range(1,n+1):
+    print(' '*(n-i),end='')
+    print('*'*i)
+'''
+
+
+
+#3. 역삼각형
+'''
+***
+**
+*
+
+***
+ **
+  *
+
+
+n=int(input('n:'))
+
+for i in range(n):
+    print('*'*(n-i))
+
+
+n=int(input('n:'))
+
+for i in range(n):
+    print(' '*i,end='')
+    print('*'*(n-i))
+
+'''
+
+
+#4. 피라미드
+'''
+  *
+ ***
+*****
+'''
+
+n=int(input('n:'))
+
+for i in range(1,n+1):
+    print(' '*(n-i+1),end='')
+    print('*'*(2*i-1))
+
+
+
+
+
+
+
+
+
+

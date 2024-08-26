@@ -1,0 +1,38 @@
+#18강 내장 모듈 활용
+#목차
+#1. 내장 모듈이란?
+#2. math 모듈
+#3. random 모듈
+
+
+
+
+#1. 내장 모듈이란?
+#함수보다 확장된 개념
+#함수: 하나의 기능을 하는 것
+#모듈: 비슷한 역할하는 함수들 다 모아서 더 큰 단위로 묶어놓은 것
+#모듈을 가지고 와서 그 안의 함수를 사용할 수 있다
+
+
+
+#2. math 모듈
+import math
+
+math.ceil(2.1) #올림
+math.floor(2.1) #내림
+math.factorial(10) #팩토리얼
+math.sqrt(4) #루트
+math.pi #원주
+
+
+#3. random 모듈
+import random
+
+random.randint(1,5) #범위 내의 정수 랜덤값 생성 #1,5도 포함
+random.random() #0<= ?? <1 랜덤값 생성
+
+
+li=['a','b','c','d','e']
+random.choice(li) #리스트 값 중 하나 랜덤 뽑기
+random.sample(li,3) #리스트에서 랜덤 n개 뽑기
+random.shuffle(li) #리스트 순서 랜덤 섞기
