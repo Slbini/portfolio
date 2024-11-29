@@ -85,7 +85,7 @@ def play_and_save(env, agent, name='', seed=None):
     render_images.append(PIL.Image.fromarray(image_array))
 
     terminated, truncated = False, False
-    agent.Policy = agent.Policy.to('cpu')
+    agent.Actor = agent.Actor.to('cpu')
     
     # episode start
     while not terminated and not truncated:
@@ -260,7 +260,7 @@ class TD_ActorCritic:
                 episode_length += 1
                 
                 value = self.Critic(torch.FloatTensor(state))
-                next_value = self.Critic(torch.FloatTensor(next_state))
+                next_value = self.Critic(torch.FloatTensor(next_state)).detach()
                 
                 transition[0].append(value)
                 transition[1].append(next_value)
