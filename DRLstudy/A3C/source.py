@@ -244,7 +244,7 @@ class A3C:
         self.Critic.load_state_dict(global_agent.Critic.state_dict())     
         
     # train agent
-    def train(self, env, max_episode, evaluate_period, evaluate_num, update_period,
+    def train(self, env, max_episode, process_num, evaluate_period, evaluate_num, update_period,
               actor_initial_lr, actor_final_lr, critic_initial_lr, critic_final_lr,
               global_agent, global_optim_actor, global_optim_critic, rank, global_reward, global_episode ):    
         
@@ -266,10 +266,10 @@ class A3C:
             episode_length = 0
             transition = [[],[],[],[],[]] # [value, next_value, reward, terminated, log_prob]
             
-            actor_lr      = linear_schedule(episode, max_episode//2, actor_initial_lr, actor_final_lr)
-            actor_optimizer.learning_rate = actor_lr
-            critic_lr     = linear_schedule(episode, max_episode//2, critic_initial_lr, critic_final_lr)
-            critic_optimizer.learning_rate = critic_lr
+            actor_lr      = linear_schedule(GLOBAL_EPISODE, (process_num*max_episode)//2, actor_initial_lr, actor_final_lr)
+            global_optim_actor.learning_rate = actor_lr
+            critic_lr     = linear_schedule(GLOBAL_EPISODE, (process_num*max_episode)//2, critic_initial_lr, critic_final_lr)
+            global_optim_critic.learning_rate = critic_lr
             
             state, info = env.reset()
             
