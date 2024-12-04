@@ -1,0 +1,3 @@
+DRL_DDPG.py : DDPG 학습코드.
+
+env_Inverted_Pendulum.py : 강화학습 환경 중 하나인 Mujoco/Inverted_Pendulum 에 대한 간단한 설명코드.
