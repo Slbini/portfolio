@@ -1,0 +1,3 @@
+DRL_PPO.py : PPO 학습코드
+
+env_Inverted_Pendulum.py : 강화학습 환경중 MuJoCo/Inverted Pendulum에 대한 간단한 설명코드
