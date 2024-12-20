@@ -1,0 +1,3 @@
+DRL_C51.py : C51 학습코드
+
+env_CartPole.py : 강화학습 환경중 Classic control/Cart Pole에 대한 간단한 설명코드 
